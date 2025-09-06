@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="FramedSoul features the photos I’ve taken over time. I’d be glad if you could also sense the faint memories they hold for me.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+    <meta property="og:url" content="https://www.faint-film.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FramedSoul">
+    <meta property="og:description"
+        content="FramedSoul features the photos I’ve taken over time. I’d be glad if you could also sense the faint memories they hold for me.">
+    <meta property="og:site_name" content="FramedSoul">
+    <meta property="og:image" content="mainlogo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FramedSoul">
+    <meta name="twitter:description"
+        content="FramedSoul features the photos I’ve taken over time. I’d be glad if you could also sense the faint memories they hold for me.">
+    <meta name="twitter:image" content="mainlogo.jpg">
+    <!-- <meta name="robots" content="noindex" /> -->
+    <link rel="icon" href="mainlogo.jpg" sizes="96x96" type="image/png/jpg">
+    <link rel="icon" href="mainlogo.jpg" sizes="32x32" type="image/png/jpg">
+    <link rel="icon" href="mainlogo.jpg" sizes="32x32">
+    <link rel="icon" href="mainlogo.jpg" sizes="16x16" type="image/png/jpg">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-180x180.png"
+        sizes="180x180">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-152x152.png"
+        sizes="152x152">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-144x144.png"
+        sizes="144x144">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-120x120.png"
+        sizes="120x120">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-114x114.png"
+        sizes="114x114">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="https://www.faint-film.com/favicons/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="canonical" href="https://faint-Faint Film.com/">
+    <meta name="generator" content="Astro v5.7.13">
+    <title>FramedSoul</title>
+    
+
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="FramedSoul features the photos I've taken over time. I'd be glad if you could also sense the faint memories they hold for me.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+    <title>Bio - FramedSoul</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .l-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(248, 248, 248, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .l-header__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .l-header__name {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .l-header__name a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .l-header__text {
+            font-size: 14px;
+            color: #666;
+            text-align: right;
+        }
+
+        .l-menu-button {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 200;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .l-menu-button__line {
+            width: 100%;
+            height: 2px;
+            background: #333;
+            transition: 0.3s;
+        }
+
+        .l-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.9);
+            z-index: 150;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .l-menu.is-open {
+            display: flex;
+        }
+
+        .l-menu__inner {
+            text-align: center;
+        }
+
+        .l-menu__item {
+            margin: 30px 0;
+        }
+
+        .l-menu .title {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .l-menu .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .l-menu .links a:hover {
+            color: #ccc;
+        }
+
+        .l-menu .text {
+            color: #ccc;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .main {
+            margin-top: 100px;
+            min-height: calc(100vh - 100px);
+        }
+
+        .p-bio-main__inner {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .grid-item01 { grid-area: 1 / 1 / 2 / 2; }
+        .grid-item02 { grid-area: 1 / 2 / 2 / 3; }
+        .grid-item03 { grid-area: 1 / 3 / 4 / 4; }
+        .grid-item04 { grid-area: 2 / 1 / 3 / 2; }
+        .grid-item05 { grid-area: 3 / 1 / 4 / 2; }
+
+        .p-bio-main__item h2 {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .p-bio-main__item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .p-bio-main__area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bio-portrait {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            width: 300px;
+            height: 400px;
+        }
+
+        .bio-portrait:hover {
+            transform: scale(1.02);
+        }
+
+        .bio-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.2) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
+
+        .bio-portrait:hover img {
+            filter: grayscale(0) contrast(1.2);
+        }
+
+        .l-footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .p-bio-main__inner {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 30px;
+                padding: 40px 20px;
+            }
+            
+            .grid-item01, .grid-item02, .grid-item03, .grid-item04, .grid-item05 {
+                grid-area: auto;
+            }
+            
+            .bio-portrait {
+                width: 250px;
+                height: 350px;
+            }
+
+            .l-header__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .l-header__text {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="l-header">
+        <div class="l-header__inner">
+            <h1 class="l-header__name"> <a href="index.html">FramedSoul</a> </h1>
+            <p class="l-header__text">Jigar's photo site.<br>Seeing world through my Lens</p>
+        </div>
+    </header> 
+    
+    <button class="l-menu-button" onclick="toggleMenu()"> 
+        <span class="l-menu-button__line"></span> 
+        <span class="l-menu-button__line"></span> 
+    </button>
+    
+    <div class="l-menu" id="menu">
+        <div class="l-menu__inner">
+            <div class="l-menu__item">
+                <p class="title">Navigation</p>
+                <div class="links"> 
+                    <a href="index.html">Home</a>
+                    <a href="bio.html">Bio</a>
+                    <a href="mailto:jigarsakhia2020@gmail.com">Contact</a> 
+                </div>
+            </div>
+            <div class="l-menu__item">
+                <p class="title">SNS</p>
+                <div class="links"> 
+                    <a href="https://www.instagram.com/sakhiajigar" target="_blank">Instagram</a> 
+                </div>
+            </div>
+            <div class="l-menu__item">
+                <p class="title">Thought</p>
+                <p class="text">Even after time passes, a single photo can faintly bring back the moment. Photography is wonderful.</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="p-bio">
+            <section class="p-bio-main">
+                <div class="p-bio-main__inner">
+                    <div class="p-bio-main__item grid-item01">
+                        <h2>Name</h2>
+                        <p>Jigar Sakhia</p>
+                    </div>
+                    <div class="p-bio-main__item grid-item02">
+                        <h2>Information</h2>
+                        <p>I'm an engineer by profession, but photography is something I enjoy in my free time. This site showcases moments I've captured from my daily life. Still I am working on this site. Stay tunned for my updated site.</p>
+                    </div>
+                    <div class="p-bio-main__area grid-item03"> 
+                        <div class="bio-portrait">
+                            <img src="myimage.jpg" alt="Jigar Sakhia - Portrait" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="p-bio-main__item grid-item04">
+                        <h2>UseCamera</h2>
+                        <p>S24 ULTRA</p>
+                    </div>
+                    <div class="p-bio-main__item grid-item05">
+                        <h2>Contact</h2>
+                        <p>jigarsakhia2020@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="l-footer"> 
+        <small>&copy; 2025 FramedSoul</small> 
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('is-open');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const menuButton = document.querySelector('.l-menu-button');
+            
+            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                menu.classList.remove('is-open');
+            }
+        });
+    </script>
+</body>
+</html>
